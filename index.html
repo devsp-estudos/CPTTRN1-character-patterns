@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPTTRN1 | Character Patterns</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <h1>Character Patterns</h1>
+
+  <div class="container-header">
+    <label for="testCases">Insira a quantidade de testes: </label>
+    <input id="testCases" type="number" oninput="handleChangeQntTestCases(this)" value="1" autofocus>
+  </div>
+
+  <main id="containerMain">
+    <div class="container-test-cases">
+      <h3>Caso de teste - 1</h3>
+
+      <div class="container-input">
+        <input id="case-l-0" placeholder="qnt. linhas" type="number">
+        <input id="case-c-0" placeholder="qnt. colunas" type="number">
+      </div>
+    </div>
+  </main>
+
+  <button class="btn-generate" onclick="printChessboard()">Gerar Chessboard</button>
+
+  <div id="outputChessboard"></div>
+</body>
+
+</html>
