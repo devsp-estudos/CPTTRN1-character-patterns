@@ -6,8 +6,6 @@ process.stdin.on('readable', () => {
   while ((chunk = process.stdin.read()) !== null) {
     const dataToChessboard = generateDataToChessboard(chunk)
 
-
-
     const chessboards = generateChessboards(dataToChessboard)
 
     process.stdout.write(chessboards)
@@ -36,11 +34,11 @@ function generateDataToChessboard(data) {
 function generateChessboard(lines, columns) {
   const arrayLines = [...Array(Number(lines))].map((_, idxLine) => {
     const asteriskIsFirstCharacter = idxLine % 2 == 0
-    let character = asteriskIsFirstCharacter ? "*" : "."
+    let character = asteriskIsFirstCharacter ? '*' : '.'
 
     const arrayColumns = [...Array(Number(columns))].map(_ => {
       const currentCharacter = character
-      character = character === "*" ? "." : "*"
+      character = character === '*' ? '.' : '*'
 
       return currentCharacter
     })
